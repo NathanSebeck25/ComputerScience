@@ -37,3 +37,10 @@ k=int(input(" Enter a x value\n:"))
 l=int(input(" Enter a y value\n:"))
 modulus(k,i)
 
+def Floor_Devision(x,y):
+    print(x//y)
+    return x//y
+m=int(input(" Enter a x value\n:"))
+n=int(input(" Enter a y value\n:"))
+Floor_Devision(m,n)
+
