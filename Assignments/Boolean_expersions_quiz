@@ -1,0 +1,15 @@
+answer_1 = int(input("Give a whole number that is less than 18.\n"))
+print(answer_1 < 18)
+
+answer_2 = int(input("Give a whole number that is less than 27.\n"))
+print(answer_2 < 27)
+
+answer_3 = int(input("Give a whole number that is greater than 5.\n"))
+print(answer_3 > 5)
+
+answer_4 = int(input("Give a whole number that is greater than 78.\n"))
+print(answer_4 > 78)
+
+answer_5 = int(input("Give a number that is equal to 7.\n"))
+print(answer_5 == 7)
+
