@@ -43,7 +43,5 @@ else:
 Q1= input("What is 5 == too?\n:")
 if Q1 =="five" or "5" or "Five":
     print("Correct")
-Q2=
-Q3=
-Q4=
-Q5=
+else:
+    print("inncorect")

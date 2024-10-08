@@ -1,15 +1,43 @@
-answer_1 = int(input("Give a whole number that is less than 18.\n"))
-print(answer_1 < 18)
+print("Give all answers in integer form.") #basic instructions
+tally=0
+answer_1 = int(input("Give a whole number that is less than 18.\n:")) #the bascic function for the question renced and repedted  
+if answer_1 < 18:
+   print("Correct")
+   print(answer_1 < 18)
+   tally+=1
+else:
+    print("Inncorect")
 
-answer_2 = int(input("Give a whole number that is less than 27.\n"))
-print(answer_2 < 27)
+answer_2 = int(input("Give a whole number that is less than 27.\n:"))
+if answer_2 < 26:
+    print("Correct")
+    print(answer_2 < 27)
+    tally= tally+1
+else:
+    print("Inncorect")
 
-answer_3 = int(input("Give a whole number that is greater than 5.\n"))
-print(answer_3 > 5)
+answer_3 = int(input("Give a whole number that is greater than 5.\n:"))
+if answer_3 > 5:
+    print("Correct")
+    print(answer_3 > 5)
+    tally+=1
+else:
+    print("Inncorect")
 
-answer_4 = int(input("Give a whole number that is greater than 78.\n"))
-print(answer_4 > 78)
+answer_4 = int(input("Give a whole number that is greater than 78.\n:"))
+if answer_4 > 78:
+    print("Correct")
+    print(answer_4 > 78)
+    tally+=1
+else:
+    print("Inncorect")
 
-answer_5 = int(input("Give a number that is equal to 7.\n"))
-print(answer_5 == 7)
+answer_5 = int(input("Give a number that is equal to 7.\n:"))
+if answer_5 == 7:
+    print("Correct")
+    print(answer_5 == 7)
+    tally+=1
+else:
+    print("Inncorect")
 
+print(tally) #final answer 
