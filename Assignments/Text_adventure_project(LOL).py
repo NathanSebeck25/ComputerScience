@@ -1,8 +1,8 @@
 # Asking what lane they want to play 
-Ap  = "abillity "
-Hp_tank    = "Hp or arrmor "
+Ap  = "Abilitys or spells "
+Hp_tank    = "Health Points "
 Resistance_tanks = "Arrmor or Magic Resistance "
-Ad  = "Attack "
+Ad  = "Attacks "
 def start():
     start1 = input("What lane type do you want to play top(tankyer), mid(more magic or ability), or bot(more attack)?(please answer with one of the listed roles)\n:").lower()
     if start1 == "top":
@@ -16,7 +16,12 @@ def start():
         start()
         
 def  item_select():
-    input("What item do you want?\n The staff of the ages (an item from an achient civalazation) it boosts your " + Ap +"\n The infinaty edge (A steel browad sword) " + Ad + "\n The helm of Jack (a legendary warrier of the past) it boosts your" + Resistance_tanks+ "\n "  )
+    input("What item do you want?\n The staff of the ages (an item from an achient civalazation) it boosts your " + Ap +"\n The infinaty edge (A steel browad sword) " + Ad + 
+          "\n The helm of Jack (a legendary warrier of the past) it boosts your" + Resistance_tanks+ "\n The Lantern of dispair it's a relic of the elders that heals you and boosts your" + Hp_tank 
+          + "\n So which do you chose\n (please be careful you must type the item you chose as [roa] for the rod of the ages\n[IE]) for the infinity edge\n [Jak'sho] for the helm of jack\n or [UND] for the Lantern of dispair?\n:").lower()
+    if item_select == "roa" or "[roa]":
+        print("You now have better abilitys or spells")
+    elif item_select == "ie" or "[ie]":
 
 
 #List of champs
@@ -28,6 +33,7 @@ def  item_select():
     #Smolder = ad 
     #Jhin = ad
     #Senna = ad
+    #Below functions are for different champs
 def Top_champs(): 
     global Resistance_tanks
     Top_champ = input("What champ are you going to play Naut, Sett, Mord(please answer with one of the listed camp in that format)\n:").lower()
