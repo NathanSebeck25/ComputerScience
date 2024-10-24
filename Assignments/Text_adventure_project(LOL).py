@@ -17,12 +17,22 @@ def start():
         
 def  item_select():
     input("What item do you want?\n The staff of the ages (an item from an achient civalazation) it boosts your " + Ap +"\n The infinaty edge (A steel browad sword) " + Ad + 
-          "\n The helm of Jack (a legendary warrier of the past) it boosts your" + Resistance_tanks+ "\n The Lantern of dispair it's a relic of the elders that heals you and boosts your" + Hp_tank 
-          + "\n So which do you chose\n (please be careful you must type the item you chose as [roa] for the rod of the ages\n[IE]) for the infinity edge\n [Jak'sho] for the helm of jack\n or [UND] for the Lantern of dispair?\n:").lower()
+          "\n The helm of Jak (a legendary warrier of the past) it boosts your" + Resistance_tanks+ "\n The Lantern of dispair it's a relic of the elders that heals you and boosts your" + Hp_tank 
+          + "\n So which do you chose\n (please be careful you must type the item you chose as [ROA] for the rod of the ages\n[IE]) for the infinity edge\n [Jak'sho] for the helm of jak\n or [UND] for the Lantern of dispair?\n:").lower()
     if item_select == "roa" or "[roa]":
+        print("You have chosen the Staf of the ages")
         print("You now have better abilitys or spells")
     elif item_select == "ie" or "[ie]":
-
+        print("You have choses the Infinity Edge")
+        print("Your attacks are now stronger")
+    elif item_select == "jak'sho" or "[jak'sho]":
+        print("You have chosen the Helm of jak")
+        print("Your now able to take more hit's")
+    elif item_select == "und" or "[und]":
+        print("You have chose the Lantern of dispair")
+        print("You now gain more life over time and 'regen' in fights")
+    else:
+        print("I said it onece and im not repeating myself so now game over bo womp")
 
 #List of champs
     #Nautaless = Ad, Ap, Hp_tank, Resistance_tanks
