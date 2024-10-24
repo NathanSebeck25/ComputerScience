@@ -14,23 +14,34 @@ def start():
     else:
         print("try again ok?")
         start()
-        
+
+    
+        #Item select will either make you stronger or change nothing
 def  item_select():
     input("What item do you want?\n The staff of the ages (an item from an achient civalazation) it boosts your " + Ap +"\n The infinaty edge (A steel browad sword) " + Ad + 
           "\n The helm of Jak (a legendary warrier of the past) it boosts your" + Resistance_tanks+ "\n The Lantern of dispair it's a relic of the elders that heals you and boosts your" + Hp_tank 
           + "\n So which do you chose\n (please be careful you must type the item you chose as [ROA] for the rod of the ages\n[IE]) for the infinity edge\n [Jak'sho] for the helm of jak\n or [UND] for the Lantern of dispair?\n:").lower()
     if item_select == "roa" or "[roa]":
+       
         print("You have chosen the Staf of the ages")
         print("You now have better abilitys or spells")
+        if Ap + 2:
+             print("You are now truly stronger")
     elif item_select == "ie" or "[ie]":
         print("You have choses the Infinity Edge")
         print("Your attacks are now stronger")
+        if Ad +2:
+            print("You are now truly stronger")
     elif item_select == "jak'sho" or "[jak'sho]":
         print("You have chosen the Helm of jak")
         print("Your now able to take more hit's")
+        if Resistance_tanks + 2:
+             print("You are now truly stronger")
     elif item_select == "und" or "[und]":
         print("You have chose the Lantern of dispair")
         print("You now gain more life over time and 'regen' in fights")
+        if Hp_tank + 2:
+             print("You are now truly stronger")
     else:
         print("I said it onece and im not repeating myself so now game over bo womp")
 
@@ -46,23 +57,28 @@ def  item_select():
     #Below functions are for different champs
 def Top_champs(): 
     global Resistance_tanks
-    Top_champ = input("What champ are you going to play Naut, Sett, Mord(please answer with one of the listed camp in that format)\n:").lower()
+    Top_champ = input("What champ are you going to play Naut, Sett, Mord(please answer with one of the listed champs in that format)\n:").lower()
     #Naut = Ad, Ap, Hp_tank, Resistance_tanks
     #Sett = Ad, Hp_tank
     #Mord = Ap, Resistance_tanks
     if Top_champ == "mord":
         print("You picked Mordakiser is a " + Ap + "or " + Resistance_tanks + "bassed champ.\n:" )
+        "mord" == 1
+        
     elif Top_champ == "sett":
         print("You picked Sett a " + Ad + "or " + Hp_tank + "bassed champ.")
+        "sett" == 1
     elif Top_champ == "naut":
         print("Nautales is a "  + Hp_tank + "or " + Resistance_tanks + "bassed champ.")
+        "naut" == 1
+        
     else:
         print("You need to fix yourself.\n Try again.")
-        Top_champs("kai")
+        Top_champs()
 
 def Mid_champs():
 
-    Mid_champ = input("What champ are you going to play Diana, Xerath, Smolder(please answer with one of the listed camp in that format)\n:").lower()
+    Mid_champ = input("What champ are you going to play Diana, Xerath, Smolder(please answer with one of the listed champs in that format)\n:").lower()
 
     if Mid_champ == "diana":
         print("You picked Diana an " + Ap + " bassed champion")
@@ -74,10 +90,10 @@ def Mid_champs():
         print("You picked Smolder an" + Ad + " bassed champion")
     else:
         print("You need to fix yourself.\n Try again.")
-        Mid_champs("akali")
+        Mid_champs()
 
 def Bot_champs():
-    Bot_champ = input("What champ are you going to play Smolder, Jhin, Senna (please answer with one of the listed camp in that format)\n:").lower()
+    Bot_champ = input("What champ are you going to play Smolder, Jhin, Senna (please answer with one of the listed champs in that format)\n:").lower()
 
     if Bot_champ == "smolder":
         print("You picked Smolder an " + Ad + " bassed champion")
@@ -89,6 +105,7 @@ def Bot_champs():
         print("You picked Senna an " + Ad + " or " + Ap + " bassed champion")
     else:
         print("You need to fix yourself.\n Try again.")
-        Bot_champs("vayne")
+        Bot_champs()
 
 start()
+item_select()
