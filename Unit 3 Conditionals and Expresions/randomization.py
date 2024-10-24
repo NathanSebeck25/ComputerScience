@@ -11,3 +11,7 @@ if p<=0.25:
 
 else:
     print("womp womp, you lost!")
+
+
+"sett" == 1 
+print("sett")

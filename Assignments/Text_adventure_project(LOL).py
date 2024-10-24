@@ -3,6 +3,11 @@ Ap  = "Abilitys or spells "
 Hp_tank    = "Health Points "
 Resistance_tanks = "Arrmor or Magic Resistance "
 Ad  = "Attacks "
+Ap_champs = 1
+Ad_champs = 1
+Resistance_champs = 1
+Hp_champs = 1
+
 def start():
     start1 = input("What lane type do you want to play top(tankyer), mid(more magic or ability), or bot(more attack)?(please answer with one of the listed roles)\n:").lower()
     if start1 == "top":
@@ -63,14 +68,14 @@ def Top_champs():
     #Mord = Ap, Resistance_tanks
     if Top_champ == "mord":
         print("You picked Mordakiser is a " + Ap + "or " + Resistance_tanks + "bassed champ.\n:" )
-        "mord" == 1
+        "mord" == Ad_champs and Resistance_tanks
         
     elif Top_champ == "sett":
         print("You picked Sett a " + Ad + "or " + Hp_tank + "bassed champ.")
-        "sett" == 1
+        "sett" == Ad and Hp_champs
     elif Top_champ == "naut":
         print("Nautales is a "  + Hp_tank + "or " + Resistance_tanks + "bassed champ.")
-        "naut" == 1
+        "naut" == Hp_champs and Resistance_tanks
         
     else:
         print("You need to fix yourself.\n Try again.")
@@ -82,12 +87,15 @@ def Mid_champs():
 
     if Mid_champ == "diana":
         print("You picked Diana an " + Ap + " bassed champion")
+        "diana" == Ap_champs
 
     elif Mid_champ == "xerath":
         print("You picked Xerath an" + Ap + " bassed champion")
+        "xerath" == Ap_champs
     
     elif Mid_champ == "smolder":
         print("You picked Smolder an" + Ad + " bassed champion")
+        "smolder" == Ad_champs
     else:
         print("You need to fix yourself.\n Try again.")
         Mid_champs()
@@ -97,12 +105,14 @@ def Bot_champs():
 
     if Bot_champ == "smolder":
         print("You picked Smolder an " + Ad + " bassed champion")
+        "smolder" == Ad_champs
     
     elif Bot_champ == "jhin":
         print("You picked Jhin an " + Ad + " bassed champion")
-
+        "jhin" == Ad_champs
     elif Bot_champ == "senna":
         print("You picked Senna an " + Ad + " or " + Ap + " bassed champion")
+        "senna" == Ad_champs and Ap_champs
     else:
         print("You need to fix yourself.\n Try again.")
         Bot_champs()
