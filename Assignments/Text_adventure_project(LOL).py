@@ -75,16 +75,17 @@ def Top_champs():
     #Mord = Ap, Resistance_tanks
     if Top_champ == "mord":
         print("You picked Mordakiser a " + Ap + "or " + Resistance_tanks + "bassed champ." )
-        "mord" == Ad_champs and Resistance_tanks
+        "mord" == Ap_champs and Resistance_tanks
         Player_char=="mord"
+        "mord"
         
     elif Top_champ == "sett":
         print("You picked Sett a " + Ad + "or " + Hp_tank + "bassed champ.")
-        "sett" == Ad and Hp_champs
+        "sett" == Ad_champs and Hp_champs
         Player_char == "sett"
     elif Top_champ == "naut":
         print("Nautales is a "  + Hp_tank + "or " + Resistance_tanks + "bassed champ.")
-        "naut" == Hp_champs and Resistance_tanks
+        "naut" == Hp_champs and Resistance_champs
         Player_char == "naut"
         
     else:
@@ -148,10 +149,13 @@ def Minnion_wave_1():
         print("The ghouls and skelitons start brwaling in the middle and you 'Bark' comands at the sekitons they semingly understand push through the wave leaving a few surounding you.\n"+
               "You have gained knolage from this counter you get a +1")
         Player_char=+1
-
-
+def Minnion_wave_2():
+    input("In the distance you see the next wave of ghouls approach ")
+def First_enemy_sentinal():
+    input("ads")
 
 
 
 start()
 item_select()
+Minnion_wave_1()
