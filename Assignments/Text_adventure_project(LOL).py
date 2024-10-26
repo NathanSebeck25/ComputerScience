@@ -8,9 +8,9 @@ Ap_champs = 1
 Ad_champs = 1
 Resistance_champs = 1
 Hp_champs = 1
-
+Champ = 0
 def start():
-    play_the_game=input("Do you wish to enter the Arena Y or N(please input in that format)\n:").lower()
+    play_the_game=input("Do you wish to enter the Arena Yes or No(please input y or n )\n:").lower()
     if play_the_game == "y":
          start1 = input("What lane type do you want to play top(tankyer), mid(more magic or ability), or bot(more attack)?(please answer with one of the listed roles)\n:").lower()
          if start1 == "top":
@@ -68,58 +68,68 @@ def  item_select():
     #Senna = ad
     #Below functions are for different champs
 def Top_champs(): 
-    global Resistance_tanks
-    Top_champ = input("What champ are you going to play Naut, Sett, Mord(please answer with one of the listed champs in that format)\n:").lower()
+    global Champ
+    Champ = input("What champ are you going to play Naut, Sett, Mord(please answer with one of the listed champs in that format)\n:").lower()
     #Naut = Ad, Ap, Hp_tank, Resistance_tanks
     #Sett = Ad, Hp_tank
     #Mord = Ap, Resistance_tanks
-    if Top_champ == "mord":
+    if Champ == "mord":
         print("You picked Mordakiser is a " + Ap + "or " + Resistance_tanks + "bassed champ.\n:" )
         "mord" == Ad_champs and Resistance_tanks
+        Champ=+1
         
-    elif Top_champ == "sett":
+    elif Champ == "sett":
         print("You picked Sett a " + Ad + "or " + Hp_tank + "bassed champ.")
         "sett" == Ad and Hp_champs
-    elif Top_champ == "naut":
+        Champ=+1
+    elif Champ == "naut":
         print("Nautales is a "  + Hp_tank + "or " + Resistance_tanks + "bassed champ.")
         "naut" == Hp_champs and Resistance_tanks
+        Champ=+1
         
     else:
         print("You need to fix yourself.\n Try again.")
         Top_champs()
 
 def Mid_champs():
+    global Champ
+    Champ = input("What champ are you going to play Diana, Xerath, Smolder(please answer with one of the listed champs in that format)\n:").lower()
 
-    Mid_champ = input("What champ are you going to play Diana, Xerath, Smolder(please answer with one of the listed champs in that format)\n:").lower()
-
-    if Mid_champ == "diana":
+    if Champ == "diana":
         print("You picked Diana an " + Ap + " bassed champion")
         "diana" == Ap_champs
+        Champ=+1
 
-    elif Mid_champ == "xerath":
+    elif Champ == "xerath":
         print("You picked Xerath an" + Ap + " bassed champion")
         "xerath" == Ap_champs
+        Champ=+1
     
-    elif Mid_champ == "smolder":
+    elif Champ == "smolder":
         print("You picked Smolder an" + Ad + " bassed champion")
         "smolder" == Ad_champs
+        Champ=+1
     else:
         print("You need to fix yourself.\n Try again.")
         Mid_champs()
 
 def Bot_champs():
-    Bot_champ = input("What champ are you going to play Smolder, Jhin, Senna (please answer with one of the listed champs in that format)\n:").lower()
+    global Champ
+    Champ = input("What champ are you going to play Smolder, Jhin, Senna (please answer with one of the listed champs in that format)\n:").lower()
 
-    if Bot_champ == "smolder":
+    if Champ == "smolder":
         print("You picked Smolder an " + Ad + " bassed champion")
         "smolder" == Ad_champs
+        Champ=+1
     
-    elif Bot_champ == "jhin":
+    elif Champ == "jhin":
         print("You picked Jhin an " + Ad + " bassed champion")
         "jhin" == Ad_champs
-    elif Bot_champ == "senna":
+        Champ=+1
+    elif Champ == "senna":
         print("You picked Senna an " + Ad + " or " + Ap + " bassed champion")
         "senna" == Ad_champs and Ap_champs
+        Champ=+1
     else:
         print("You need to fix yourself.\n Try again.")
         Bot_champs()
@@ -131,7 +141,7 @@ def Minnion_wave_1():
     if wave_option_1 == "1":
         print("Mr.Burns from the simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
     elif wave_option_1 == "2":
-        print("The Sentinal watches as you clear the minnion wave with ease quite frankly he is shoked by it the sentinal gives you a potion that gives you a +1")
+        print("The Sentinal watches as you clear the minnion wave with ease quite frankly he is shoked by it the sentinal gives you a potion that gives you a +2")
         
 
 
