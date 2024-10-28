@@ -161,9 +161,11 @@ def Minnion_wave_2():
         Player_char =+1
     else:
         print("I dont like you any more now leave")
-def First_enemy_sentinal():
-    input("As you turn the corner you see the opposing Sentinal your Skeletons")
-
+def Enemy_sentinal():
+    Enemy_sentinal_interaction = input("As you turn the corner you see the opposing Sentinal.\n your Skeletons start attacking it and you can see the they wont be able to take the sentinal down without your help So do you?(Y or N)").lower()
+    if Enemy_sentinal_interaction == "y" and Player_char >= 4:
+        print("You slay the oposing Sentinal with the help of your Skeletons and you feal as if you could slay a god and with that you see the rest of the sentinals down this road or lane if you could call it that " +
+              "Crash down and turn to what looks like ruble. You see the next wave of ghouls stop and turn into lights accross the wall")
 
 
 start()
