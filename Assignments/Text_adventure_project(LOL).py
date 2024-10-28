@@ -1,6 +1,6 @@
 # Asking what lane they want to play 
 import random
-Ap  = "Abilitys or spells "
+Ap  = "Abilitys and/or spells "
 Hp_tank    = "Health Points "
 Resistance_tanks = "Arrmor or Magic Resistance "
 Ad  = "Attacks "
@@ -8,7 +8,7 @@ Ap_champs = 1
 Ad_champs = 1
 Resistance_champs = 1
 Hp_champs = 1
-Champ = 0
+Player_char = 1
 def start():
     play_the_game=input("Do you wish to enter the Arena Yes or No(please input y or n )\n:").lower()
     if play_the_game == "y":
@@ -58,7 +58,7 @@ def  item_select():
         print("I said it onece and im not repeating myself so now game over bo womp")
 
 #List of champs
-    #Nautaless = Ad, Ap, Hp_tank, Resistance_tanks
+    #Nautaless = Hp_tank, Resistance_tanks
     #Sett = Ad, Hp_tank
     #Mordakiser = Ap, Resistance_tanks
     #Diana = ap 
@@ -68,47 +68,48 @@ def  item_select():
     #Senna = ad
     #Below functions are for different champs
 def Top_champs(): 
-    global Champ
+    global Player_char
     Champ = input("What champ are you going to play Naut, Sett, Mord(please answer with one of the listed champs in that format)\n:").lower()
     #Naut = Ad, Ap, Hp_tank, Resistance_tanks
     #Sett = Ad, Hp_tank
     #Mord = Ap, Resistance_tanks
     if Champ == "mord":
-        print("You picked Mordakiser is a " + Ap + "or " + Resistance_tanks + "bassed champ.\n:" )
-        "mord" == Ad_champs and Resistance_tanks
-        Champ=+1
+        print("You picked Mordakiser a " + Ap + "or " + Resistance_tanks + "bassed champ." )
+        "mord" == Ap_champs and Resistance_tanks
+        Player_char=="mord"
+        "mord"
         
     elif Champ == "sett":
         print("You picked Sett a " + Ad + "or " + Hp_tank + "bassed champ.")
-        "sett" == Ad and Hp_champs
-        Champ=+1
+        "sett" == Ad_champs and Hp_champs
+        Player_char == "sett"
     elif Champ == "naut":
         print("Nautales is a "  + Hp_tank + "or " + Resistance_tanks + "bassed champ.")
-        "naut" == Hp_champs and Resistance_tanks
-        Champ=+1
+        "naut" == Hp_champs and Resistance_champs
+        Player_char == "naut"
         
     else:
         print("You need to fix yourself.\n Try again.")
         Top_champs()
 
 def Mid_champs():
-    global Champ
+    global Player_char
     Champ = input("What champ are you going to play Diana, Xerath, Smolder(please answer with one of the listed champs in that format)\n:").lower()
-
+    
     if Champ == "diana":
         print("You picked Diana an " + Ap + " bassed champion")
         "diana" == Ap_champs
-        Champ=+1
+        Player_char == "dianna"
 
     elif Champ == "xerath":
         print("You picked Xerath an" + Ap + " bassed champion")
         "xerath" == Ap_champs
-        Champ=+1
+        Player_char == "xerath"
     
     elif Champ == "smolder":
         print("You picked Smolder an" + Ad + " bassed champion")
         "smolder" == Ad_champs
-        Champ=+1
+        Player_char == "smolder"
     else:
         print("You need to fix yourself.\n Try again.")
         Mid_champs()
@@ -120,33 +121,45 @@ def Bot_champs():
     if Champ == "smolder":
         print("You picked Smolder an " + Ad + " bassed champion")
         "smolder" == Ad_champs
-        Champ=+1
+        Player_char == "smolder"
     
     elif Champ == "jhin":
         print("You picked Jhin an " + Ad + " bassed champion")
         "jhin" == Ad_champs
-        Champ=+1
+        Player_char == "jhin"
     elif Champ == "senna":
         print("You picked Senna an " + Ad + " or " + Ap + " bassed champion")
         "senna" == Ad_champs and Ap_champs
-        Champ=+1
+        Player_char == "senna"
     else:
         print("You need to fix yourself.\n Try again.")
         Bot_champs()
 #this it to save changes
 def Minnion_wave_1():
-    wave_option_1 = input("You have spawed in the battle area and enter right by what you assume to be your Gaurdian/Sentinal being and it tels you\n 'You have three options to continue'\n"
+    global Player_char
+    wave_option_1 = input("You have spawed in the battle area and enter right by what you assume to be your Gaurdian/Sentinal being and it tells you\n 'You have three options to continue'\n"
           +"Option 1\nYou can leave but that will not end well\n\n Option 2 you can clear that aproching wave of ghouls\n\n" 
           + "Option 3 you will let your own wave of Skeletions to clear it for you\n\n 'So which will it be'\n(pleas answer options as 1, 2, or 3.)" ).lower()
     if wave_option_1 == "1":
-        print("Mr.Burns from the simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
+        print("Mr.Burns from the Simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
     elif wave_option_1 == "2":
         print("The Sentinal watches as you clear the minnion wave with ease quite frankly he is shoked by it the sentinal gives you a potion that gives you a +2")
-        
+        Player_char =+2
+    
+    elif wave_option_1 == "3":
+        print("The ghouls and skelitons start brwaling in the middle and you 'Bark' comands at the sekitons they semingly understand push through the wave leaving a few surounding you.\n"+
+              "You have gained knolage from this counter you get a +1")
+        Player_char=+1
+    else:
+        print("Mr.Burns from the Simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
+def Minnion_wave_2():
+    input("In the distance you see the next wave of ghouls approaching 
+          IF ")
+def First_enemy_sentinal():
+    input("ads")
+    
 
-
-
-
-
+#put this here to save stuff 
 start()
 item_select()
+Minnion_wave_1()
