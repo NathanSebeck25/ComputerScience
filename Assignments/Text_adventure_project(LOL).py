@@ -13,7 +13,7 @@ def start():
     play_the_game=input("Do you wish to enter the Arena Yes or No(please input y or n )\n:").lower()
     if play_the_game == "y":
          start1 = input("What type do you want to play top(tankyer), more magic or ability(type ap for this one), or more attack?(please answer with one of the listed types)\n:").lower()
-         if start1 == "Tankyer":
+         if start1 == "tankyer":
                 Top_champs()
          elif start1 == "ap":
                 Mid_champs()
