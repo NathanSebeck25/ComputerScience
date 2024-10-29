@@ -164,7 +164,7 @@ def Minnion_wave_2():
         print("I don't like you any more now leave")
 def Enemy_sentinal():
     global Player_char
-    Enemy_sentinal_interaction = input("As you turn the corner you see the opposing Sentinal.\n your Skeletons start attacking it and you can see the they wont be able to take the sentinal down without your help So do you?(Y or N)").lower()
+    Enemy_sentinal_interaction = input("As you turn the corner you see the opposing Sentinal.\n your Skeletons start attacking it and you can see the they wont be able to take the sentinal down without your help So do you?(Y or N)\n:").lower()
     if Enemy_sentinal_interaction == "y" and Player_char > 4:
         print("You slay the opposing Sentinal with the help of your Skeletons and you feel as if you could slay a god and with that you see the rest of the sentinals down this road or lane if you could call it that " +
               "Crash down and turn to what looks like rubble. You see the next wave of ghouls stop and turn into lights across the wall and your skeletons do the same along your side")
@@ -251,7 +251,7 @@ def The_walk():
     elif sirens == "2":
         print("Wow you made the smart and educated deccision.\n You aproach a tomb or enterance of a biulding ")
 def The_telaporter():
-    teleporter = input("As you enter this building you see a 'Teleporter' you can either 1. Go down or 2. Stay upstairs")
+    teleporter = input("As you enter this building you see a 'Teleporter' you can either 1. Go down or 2. Stay upstairs\n")
     if teleporter =="1." or teleporter =="1":
         print("You push the button to go down the elevator it's just an elavator.")
     else:
@@ -259,7 +259,7 @@ def The_telaporter():
 
 def Skeletor_jokes():
     print("You read a sign on the elevator that says your 'Minions' will be making jokes especially if you have the skeletons")
-    jokes = input("Do you want skeletons Y or N").lower()
+    jokes = input("Do you want skeletons Y or N\n:").lower()
     if jokes == "y":
         print("Bad dessision but ok")
     else:
