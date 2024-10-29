@@ -172,13 +172,13 @@ def Enemy_sentinal():
               +"the rest of the game you are now T.K.OD.")
     else:
         print("Are you reallly denser than Osmium you {insert random gordon ramsey quote}.\n You don't dessirve to try agin over this are you kiding me.")
-
+#############################################################           The rest of this is "Fluff" to make the story more intertaning          ########################################
 def The_desent():
     yes_or_no =input("As yo dessend into this structure you hear 'Elevator music' do you leave it on or turn it off ( Type Off or On)\n ").lower()
     if yes_or_no == "Off":
         y_or_n = input("Are you sure(Y or N)").lower()
         if y_or_n == "y":
-            print("You win this is only one of the 2 good endings")
+            print("You win this is only one of the 2 good endings as you stoped this annoying music.")
         else:
             print("Thank you for listesning to the music ")
     else:
@@ -197,9 +197,14 @@ def The_telaporter():
         print("You push the button to go down the elevator it's just an elavator.")
     else:
         print("I mean you decided to not go down the elavator this is your own fault and out of my hands.\n You see a screen turn on and some creepy doll say let's play a game.")
+
+def Skeletor_jokes():
+    print("you read a sigh on the elavator that says your 'Minnions' will be makeing jokes espesially if you have the skeletons")
+
 start()
 item_select()
 The_walk()
+The_telaporter()
 The_desent()
 Minnion_wave_1()
 Minnion_wave_2()
