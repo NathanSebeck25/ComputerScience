@@ -15,6 +15,7 @@ def start():
          start1 = input("What type do you want to play top(tankyer), more magic or ability(type ap for this one), or more attack?(please answer with one of the listed types)\n:").lower()
          if start1 == "tankyer":
                 Top_champs()
+               
          elif start1 == "ap":
                 Mid_champs()
          elif start1 == "more attack":
@@ -33,24 +34,29 @@ def  item_select():
     if item == "roa" or item == "[roa]":
         print("You have chosen the Staf of the ages")
         print("You now have better abilitys or spells")
+        The_walk()
         if Ap :
              print("You are now truly stronger")
              Ap_champs+2
+             
     elif item == "ie" or item == "[ie]":
         print("You have choses the Infinity Edge")
         print("Your attacks are now stronger")
+        The_walk()
         if Ad :
             print("You are now truly stronger")
             Ad_champs+2
     elif item == "jak'sho" or item == "[jak'sho]":
         print("You have chosen the Helm of jak")
         print("Your now able to take more hit's")
+        The_walk
         if Resistance_tanks  :
              print("You are now truly stronger")
              Resistance_champs+2
     elif item == "und" or item == "[und]":
         print("You have chose the Lantern of dispair")
         print("You now gain more life over time and 'regen' in fights")
+        The_walk
         if Hp_tank :
              print("You are now truly stronger")
              Hp_champs+2
@@ -78,16 +84,17 @@ def Top_champs():
         "mord" == Ap_champs and Resistance_tanks
         Player_char=="mord"
         "mord"
-        
+        item_select()
     elif Champ == "sett":
         print("You picked Sett a " + Ad + "or " + Hp_tank + "bassed champ.")
         "sett" == Ad_champs and Hp_champs
         Player_char == "sett"
+        item_select()
     elif Champ == "naut":
         print("Nautales is a "  + Hp_tank + "or " + Resistance_tanks + "bassed champ.")
         "naut" == Hp_champs and Resistance_champs
         Player_char == "naut"
-        
+        item_select()
     else:
         print("You need to fix yourself.\n Try again.")
         Top_champs()
@@ -100,16 +107,19 @@ def Mid_champs():
         print("You picked Diana an " + Ap + " bassed champion")
         "diana" == Ap_champs
         Player_char == "dianna"
+        item_select()
 
     elif Champ == "xerath":
         print("You picked Xerath an" + Ap + " bassed champion")
         "xerath" == Ap_champs
         Player_char == "xerath"
+        item_select()
     
     elif Champ == "smolder":
         print("You picked Smolder an" + Ad + " bassed champion")
         "smolder" == Ad_champs
         Player_char == "smolder"
+        item_select
     else:
         print("You need to fix yourself.\n Try again.")
         Mid_champs()
@@ -122,15 +132,17 @@ def Bot_champs():
         print("You picked Smolder an " + Ad + " bassed champion")
         "smolder" == Ad_champs
         Player_char == "smolder"
-    
+        item_select()
     elif Champ == "jhin":
         print("You picked Jhin an " + Ad + " bassed champion")
         "jhin" == Ad_champs
         Player_char == "jhin"
+        item_select()
     elif Champ == "senna":
         print("You picked Senna an " + Ad + " or " + Ap + " bassed champion")
         "senna" == Ad_champs and Ap_champs
         Player_char == "senna"
+        item_select()
     else:
         print("You need to fix yourself.\n Try again.")
         Bot_champs()
@@ -145,11 +157,12 @@ def Minnion_wave_1():
     elif Minnion_wave_options_1 == "2":
         print("The Sentinal watches as you clear the minnion wave with ease quite frankly he is shoked by it the sentinal gives you a potion that gives you a +1 on top of the experience that you gained")
         Player_char =+2
-
+        Minnion_wave_2
     elif Minnion_wave_options_1 == "3":
         print("The ghouls and skeletons start brawling in the middle and you 'Bark' commands at the Skeletons they seemingly understand push through the wave leaving a few surounding you.\n"+
               "You have gained knowledge from this encounter you get a +1 you also hear a bunch of poor taste jokes about bones")
         Player_char=+1
+        Minnion_wave_2
     else:
          print("Mr.Burns from the Simpsons was watching from afar and got upset with you he has released the hounds.\n (you suck at this)")
 def Minnion_wave_2():
@@ -160,6 +173,7 @@ def Minnion_wave_2():
     elif Minnion_wave_options_2 == "2" or Minnion_wave_options_2 == "3":
         print("You approach the enemy wave and with your extra numbers you reach the choke point in front of the enemy sentinal quite esally ")
         Player_char =+1
+        Enemy_sentinal()
     else:
         print("I don't like you any more now leave")
 def Enemy_sentinal():
@@ -169,6 +183,7 @@ def Enemy_sentinal():
         print("You slay the opposing Sentinal with the help of your Skeletons and you feel as if you could slay a god and with that you see the rest of the sentinals down this road or lane if you could call it that " +
               "Crash down and turn to what looks like rubble. You see the next wave of ghouls stop and turn into lights across the wall and your skeletons do the same along your side")
         Player_char +=55
+        John_bbeg_lair()
     elif Enemy_sentinal_interaction == "y" and Player_char <= 3:
         print("As you run up to attack the Sentinal you get feal and hear a thwunk and you get smacked into a wall giving you a severe Tua Tagoviloa. This leads to you being sidelined for "
               +"the rest of the game you are now T.K.OD.")
@@ -185,8 +200,8 @@ def John_bbeg_lair():
               +"Do you wish to take a seat on the throne?(Y or N)").lower()
         if thes == "y":
                 print("you sit on the throne and after a few seconds you hear a 'click' and fall")
-                BBEG_fight()
                 input("You are now faced by the arena boss a large being faceless and shapeless to you")
+                BBEG_fight()
         else:
                     print("You stand your ground firm and a pit fall opens beneath you now are in a pit good luck getting out")
     else:
@@ -250,10 +265,12 @@ def The_walk():
         print("You aboslute bofon you never go twards music it is always a trap or scam. Do i need to get you a coipy of Adventuring for dumies.")
     elif sirens == "2":
         print("Wow you made the smart and educated deccision.\n You aproach a tomb or enterance of a biulding ")
+        The_telaporter()
 def The_telaporter():
     teleporter = input("As you enter this building you see a 'Teleporter' you can either 1. Go down or 2. Stay upstairs\n")
     if teleporter =="1." or teleporter =="1":
         print("You push the button to go down the elevator it's just an elavator.")
+        The_desent()
     else:
         print("I mean you decided to not go down the elavator this is your own fault and out of my hands.\n You see a screen turn on and some creepy doll say let's play a game.")
 
@@ -262,19 +279,12 @@ def Skeletor_jokes():
     jokes = input("Do you want skeletons Y or N\n:").lower()
     if jokes == "y":
         print("Bad dessision but ok")
+        Minnion_wave_1
     else:
         print(" I gave you the illusion of choice so no you dont get to pick option 2")
+        Minnion_wave_1
 start()
-item_select()
-The_walk()
-The_telaporter()
-The_desent()
-Skeletor_jokes()
-Minnion_wave_1()
-Minnion_wave_2()
-Enemy_sentinal()
-John_bbeg_lair()
-BBEG_fight()
+
 
 
 #put this here to save stuff 
