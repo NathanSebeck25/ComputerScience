@@ -179,16 +179,58 @@ def Enemy_sentinal():
 def John_bbeg_lair():
     global Player_char 
     if Player_char >= 20:
-        4th = Input("You walk to the enemy base you feal your mind breack and shater and then put it's self back together.\n"
+        thes = input("You walk to the enemy base you feal your mind breack and shater and then put it's self back together.\n"
               +"you walk up further towards the light and you see a glowing throne and a lair being of incomprehensible strength.\n\n\n"
              + "Or where one onece lived as you can see the throne is empty.\n"
-              +"Do you wish to take a seat on the throne?(Y or N)).lower()
-              if 4th ="y":
-                    print("you sit on the throne and after a few seconds you hear a "click" and fall")
-              else:
-                    print("You stand your ground firm and a pit fall opens beneath you you now 
+              +"Do you wish to take a seat on the throne?(Y or N)").lower()
+        if thes == "y":
+                print("you sit on the throne and after a few seconds you hear a 'click' and fall")
+                BBEG_fight()
+                input("You are now faced by the arena boss a large being faceless and shapeless to you")
+        else:
+                    print("You stand your ground firm and a pit fall opens beneath you now are in a pit good luck getting out")
     else:
         print("You feel an Aura that is so overwhelming your mind just pops")
+    
+def BBEG_fight():
+    bosses_answer = input("You are now faced by the arena boss a large being faceless and shapeless to you.\n" + 
+          "It asks do you wish to take my place here? (y or n)").lower()
+    if bosses_answer == "y":
+        print("Good i dont want this curse now your stuck here tell you meat someone to take your place i got here 250 years ago.\n" +
+              "Sucker.\n (This was a bad ending)")
+    elif bosses_answer == "n" and Player_char == Hp_champs or Player_char == Resistance_champs:
+        print("Fine i will demolish you\n" +
+              "As this boss gets infront of you.\n"+
+              "You roll out of the way of his sword and slam your body into his breaking all the bones in the bosses body\n")
+        orb = input("you see a dark orb do you grab it(y or n)")
+        if orb == "y":
+            print("You toch the orb and you die however you end the cycle of this madness")
+        else:
+            print("You leave the orb alone and it just gravitates twards you and as it coldes with you you take the shape of the boss you killed you have now met the pain of all of those who beat the bosses before you\n(This is a nutral ending)")
+    
+    elif bosses_answer == "n" and Player_char == Ad_champs:
+        print("Fine i will demolish you\n" +
+              "As this boss gets infront of you.\n"+
+              "You roll out of the way of his sword and you stab him in whre a normal breastplate would have a break in it")
+        orb = input("you see a dark orb do you grab it(y or n)")
+        if orb == "y":
+            print("You toch the orb and you die however you end the cycle of this madness")
+        else:
+            print("You leave the orb alone and it just gravitates twards you and as it coldes with you you take the shape of the boss you killed you have now met the pain of all of those who beat the bosses before you\n(This is a nutral ending)")
+    
+    elif bosses_answer == "n" and Player_char == Ad_champs:
+        print("Fine i will demolish you\n" +
+              "As this boss gets infront of you.\n"+
+              "You roll out of the way of his sword and cast 'FIRE BALL' causeing him to bur to a crisp")
+        orb = input("you see a dark orb do you grab it(y or n)")
+        if orb == "y":
+            print("You toch the orb and you die however you end the cycle of this madness(One of 2 good endings)")
+        else:
+            print("You leave the orb alone and it just gravitates twards you and as it coldes with you you take the shape of the boss you killed you have now met the pain of all of those who beat the bosses before you\n(This is a nutral ending)")
+    
+        
+    else:
+        print(" It was a yes or no question just please go away")
 #############################################################           The rest of this is "Fluff" to make the story more intertaning          ########################################
 def The_desent():
     yes_or_no =input("As you descend into this structure you hear 'Elevator music' do you leave it on or turn it off ( Type Off or On)\n ").lower()
@@ -210,7 +252,7 @@ def The_walk():
         print("Wow you made the smart and educated deccision.\n You aproach a tomb or enterance of a biulding ")
 def The_telaporter():
     teleporter = input("As you enter this building you see a 'Teleporter' you can either 1. Go down or 2. Stay upstairs")
-    if teleporter =="1." or telaporter =="1":
+    if teleporter =="1." or teleporter =="1":
         print("You push the button to go down the elevator it's just an elavator.")
     else:
         print("I mean you decided to not go down the elavator this is your own fault and out of my hands.\n You see a screen turn on and some creepy doll say let's play a game.")
@@ -232,4 +274,7 @@ Minnion_wave_1()
 Minnion_wave_2()
 Enemy_sentinal()
 John_bbeg_lair()
+BBEG_fight()
+
+
 #put this here to save stuff 
