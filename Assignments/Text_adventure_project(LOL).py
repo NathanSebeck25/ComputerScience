@@ -2,7 +2,7 @@
 import random
 Ap  = "Abilitys and/or spells "
 Hp_tank    = "Health Points "
-Resistance_tanks = "Arrmor or Magic Resistance "
+Resistance_tanks = "Armor or Magic Resistance "
 Ad  = "Attacks "
 Ap_champs = 1
 Ad_champs = 1
@@ -137,80 +137,86 @@ def Bot_champs():
 #this it to save changes
 def Minnion_wave_1():
     global Player_char
-    Minnion_wave_options_1 = input("You have spawed in the battle area and enter right by what you assume to be your Gaurdian/Sentinal being and it tells you\n 'You have three options to continue'\n"
-          +"Option 1\nYou can leave but that will not end well\n\n Option 2 you can clear that aproching wave of ghouls\n\n" 
-          + "Option 3 you will let your own wave of Skeletons to clear it for you\n\n 'So which will it be'\n(pleas answer options as 1, 2, or 3.)" ).lower()
+    Minnion_wave_options_1 = input("You have spawned in the battle area and enter right by what you assume to be your Guardian/Sentinal being and it tells you\n 'You have three options to continue'\n"
+          +"Option 1\nYou can leave but that will not end well\n\n Option 2 you can clear that approaching wave of ghouls\n\n" 
+          + "Option 3 you will let your own wave of Skeletons to clear it for you\n\n 'So which will it be'\n(please answer options as 1, 2, or 3.)" ).lower()
     if Minnion_wave_options_1 == "1":
-        print("Mr.Burns from the Simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
+        print("Mr.Burns from the Simpsons was watching from afar and got upset with you he has released the hounds.\n (you suck at this)")
     elif Minnion_wave_options_1 == "2":
         print("The Sentinal watches as you clear the minnion wave with ease quite frankly he is shoked by it the sentinal gives you a potion that gives you a +1 on top of the experience that you gained")
         Player_char =+2
 
     elif Minnion_wave_options_1 == "3":
-        print("The ghouls and skeletons start brwaling in the middle and you 'Bark' comands at the Skeletons they semingly understand push through the wave leaving a few surounding you.\n"+
-              "You have gained knolage from this encounter you get a +1 you also hear a bunch of poor taste jokes about bones")
+        print("The ghouls and skeletons start brawling in the middle and you 'Bark' commands at the Skeletons they seemingly understand push through the wave leaving a few surounding you.\n"+
+              "You have gained knowledge from this encounter you get a +1 you also hear a bunch of poor taste jokes about bones")
         Player_char=+1
     else:
-         print("Mr.Burns from the Simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
+         print("Mr.Burns from the Simpsons was watching from afar and got upset with you he has released the hounds.\n (you suck at this)")
 def Minnion_wave_2():
     global Player_char
     Minnion_wave_options_2 =input("In the distance you see the next wave of ghouls approaching. You turn around and see the next wave of skeletons aproaching. You assume your choices are the same as before so you chose option 1, 2, or 3?\n").lower()
     if Minnion_wave_options_2 == "1":
-        print("Mr.Burns from the Simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
+        print("Mr.Burns from the Simpsons was watching from afar and got upset with you he has released the hounds.\n (you suck at this)")
     elif Minnion_wave_options_2 == "2" or Minnion_wave_options_2 == "3":
         print("You approach the enemy wave and with your extra numbers you reach the choke point in front of the enemy sentinal quite esally ")
         Player_char =+1
     else:
-        print("I dont like you any more now leave")
+        print("I don't like you any more now leave")
 def Enemy_sentinal():
     global Player_char
     Enemy_sentinal_interaction = input("As you turn the corner you see the opposing Sentinal.\n your Skeletons start attacking it and you can see the they wont be able to take the sentinal down without your help So do you?(Y or N)").lower()
     if Enemy_sentinal_interaction == "y" and Player_char > 4:
-        print("You slay the oposing Sentinal with the help of your Skeletons and you feal as if you could slay a god and with that you see the rest of the sentinals down this road or lane if you could call it that " +
-              "Crash down and turn to what looks like ruble. You see the next wave of ghouls stop and turn into lights accross the wall and your skeletons do the same along your side")
+        print("You slay the opposing Sentinal with the help of your Skeletons and you feel as if you could slay a god and with that you see the rest of the sentinals down this road or lane if you could call it that " +
+              "Crash down and turn to what looks like rubble. You see the next wave of ghouls stop and turn into lights across the wall and your skeletons do the same along your side")
         Player_char +=55
     elif Enemy_sentinal_interaction == "y" and Player_char <= 3:
-        print("As you run up to attack the Sentinal you get feal and hear a thwunk and you get smaked into a wall giveing you a sevire Tua Tagoviloa. This leads to you being sidelined for "
+        print("As you run up to attack the Sentinal you get feal and hear a thwunk and you get smacked into a wall giving you a severe Tua Tagoviloa. This leads to you being sidelined for "
               +"the rest of the game you are now T.K.OD.")
     else:
         print("Are you reallly denser than Osmium you {insert random gordon ramsey quote}.\n You don't dessirve to try agin over this are you kiding me.")
 
 
-def John_bbeg():
+def John_bbeg_lair():
     global Player_char 
     if Player_char >= 20:
-        print("You walk to the enemy base you feal your mind breack and shater and then put it's self back together.\n"
-              +"you walk up futher twards the light and you see a glowing throne and a lare being of in consrehencible strength.")
+        4th = Input("You walk to the enemy base you feal your mind breack and shater and then put it's self back together.\n"
+              +"you walk up further towards the light and you see a glowing throne and a lair being of incomprehensible strength.\n\n\n"
+             + "Or where one onece lived as you can see the throne is empty.\n"
+              +"Do you wish to take a seat on the throne?(Y or N)).lower()
+              if 4th ="y":
+                    print("you sit on the throne and after a few seconds you hear a "click" and fall")
+              else:
+                    print("You stand your ground firm and a pit fall opens beneath you you now 
     else:
-        print("You feal an Aura that is so overwhelming your mind just pops")
+        print("You feel an Aura that is so overwhelming your mind just pops")
 #############################################################           The rest of this is "Fluff" to make the story more intertaning          ########################################
 def The_desent():
-    yes_or_no =input("As yo dessend into this structure you hear 'Elevator music' do you leave it on or turn it off ( Type Off or On)\n ").lower()
+    yes_or_no =input("As you descend into this structure you hear 'Elevator music' do you leave it on or turn it off ( Type Off or On)\n ").lower()
     if yes_or_no == "Off":
         y_or_n = input("Are you sure(Y or N)").lower()
         if y_or_n == "y":
             print("You win this is only one of the 2 good endings as you stoped this annoying music.")
         else:
-            print("Thank you for listesning to the music ")
+            print("Thank you for listening to the music ")
     else:
-        print("Thank you for listesning to the music ")
+        print("Thank you for listening to the music ")
 
 def The_walk():
     print("As you march through the lands to get to the arena you hear music.")
-    sirens = input("Do you 1. Go twards the music or 2. keep walking forewards(type 1 or 2)\n ")
+    sirens = input("Do you 1. Go towards the music or 2. keep walking forewards(type 1 or 2)\n ")
     if sirens == "1":
         print("You aboslute bofon you never go twards music it is always a trap or scam. Do i need to get you a coipy of Adventuring for dumies.")
     elif sirens == "2":
         print("Wow you made the smart and educated deccision.\n You aproach a tomb or enterance of a biulding ")
 def The_telaporter():
-    telaporter = input("As you enter this biulding you see a 'Telaporter' you can either 1. Go down or 2. Stay upstairs")
-    if telaporter =="1." or telaporter =="1":
+    teleporter = input("As you enter this building you see a 'Teleporter' you can either 1. Go down or 2. Stay upstairs")
+    if teleporter =="1." or telaporter =="1":
         print("You push the button to go down the elevator it's just an elavator.")
     else:
         print("I mean you decided to not go down the elavator this is your own fault and out of my hands.\n You see a screen turn on and some creepy doll say let's play a game.")
 
 def Skeletor_jokes():
-    print("you read a sigh on the elavator that says your 'Minnions' will be makeing jokes espesially if you have the skeletons")
+    print("You read a sign on the elevator that says your 'Minions' will be making jokes especially if you have the skeletons")
     jokes = input("Do you want skeletons Y or N").lower()
     if jokes == "y":
         print("Bad dessision but ok")
@@ -225,5 +231,5 @@ Skeletor_jokes()
 Minnion_wave_1()
 Minnion_wave_2()
 Enemy_sentinal()
-John_bbeg()
+John_bbeg_lair()
 #put this here to save stuff 
