@@ -255,8 +255,10 @@ def The_desent():
             print("You win this is only one of the 2 good endings as you stoped this annoying music.")
         else:
             print("Thank you for listening to the music ")
+            Skeletor_jokes()
     else:
         print("Thank you for listening to the music ")
+        Skeletor_jokes()
 
 def The_walk():
     print("As you march through the lands to get to the arena you hear music.")
@@ -279,10 +281,10 @@ def Skeletor_jokes():
     jokes = input("Do you want skeletons Y or N\n:").lower()
     if jokes == "y":
         print("Bad dessision but ok")
-        Minnion_wave_1
+        Minnion_wave_1()
     else:
         print(" I gave you the illusion of choice so no you dont get to pick option 2")
-        Minnion_wave_1
+        Minnion_wave_1()
 start()
 
 
