@@ -12,12 +12,12 @@ Player_char = 1
 def start():
     play_the_game=input("Do you wish to enter the Arena Yes or No(please input y or n )\n:").lower()
     if play_the_game == "y":
-         start1 = input("What lane type do you want to play top(tankyer), mid(more magic or ability), or bot(more attack)?(please answer with one of the listed roles)\n:").lower()
-         if start1 == "top":
+         start1 = input("What type do you want to play top(tankyer), more magic or ability(type ap for this one), or more attack?(please answer with one of the listed types)\n:").lower()
+         if start1 == "Tankyer":
                 Top_champs()
-         elif start1 == "mid":
+         elif start1 == "ap":
                 Mid_champs()
-         elif start1 == "bot":
+         elif start1 == "more attack":
                 Bot_champs()
          else:
                 print("try again ok?")
@@ -148,7 +148,7 @@ def Minnion_wave_1():
 
     elif Minnion_wave_options_1 == "3":
         print("The ghouls and skeletons start brwaling in the middle and you 'Bark' comands at the Skeletons they semingly understand push through the wave leaving a few surounding you.\n"+
-              "You have gained knolage from this encounter you get a +1")
+              "You have gained knolage from this encounter you get a +1 you also hear a bunch of poor taste jokes about bones")
         Player_char=+1
     else:
          print("Mr.Burns from the Simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
@@ -165,7 +165,7 @@ def Minnion_wave_2():
 def Enemy_sentinal():
     global Player_char
     Enemy_sentinal_interaction = input("As you turn the corner you see the opposing Sentinal.\n your Skeletons start attacking it and you can see the they wont be able to take the sentinal down without your help So do you?(Y or N)").lower()
-    if Enemy_sentinal_interaction == "y" and Player_char >= 4:
+    if Enemy_sentinal_interaction == "y" and Player_char > 4:
         print("You slay the oposing Sentinal with the help of your Skeletons and you feal as if you could slay a god and with that you see the rest of the sentinals down this road or lane if you could call it that " +
               "Crash down and turn to what looks like ruble. You see the next wave of ghouls stop and turn into lights accross the wall and your skeletons do the same along your side")
         Player_char +=55
@@ -174,6 +174,15 @@ def Enemy_sentinal():
               +"the rest of the game you are now T.K.OD.")
     else:
         print("Are you reallly denser than Osmium you {insert random gordon ramsey quote}.\n You don't dessirve to try agin over this are you kiding me.")
+
+
+def John_bbeg():
+    global Player_char 
+    if Player_char >= 20:
+        print("You walk to the enemy base you feal your mind breack and shater and then put it's self back together.\n"
+              +"you walk up futher twards the light and you see a glowing throne and a lare being of in consrehencible strength.")
+    else:
+        print("You feal an Aura that is so overwhelming your mind just pops")
 #############################################################           The rest of this is "Fluff" to make the story more intertaning          ########################################
 def The_desent():
     yes_or_no =input("As yo dessend into this structure you hear 'Elevator music' do you leave it on or turn it off ( Type Off or On)\n ").lower()
@@ -202,13 +211,19 @@ def The_telaporter():
 
 def Skeletor_jokes():
     print("you read a sigh on the elavator that says your 'Minnions' will be makeing jokes espesially if you have the skeletons")
-
+    jokes = input("Do you want skeletons Y or N").lower()
+    if jokes == "y":
+        print("Bad dessision but ok")
+    else:
+        print(" I gave you the illusion of choice so no you dont get to pick option 2")
 start()
 item_select()
 The_walk()
 The_telaporter()
 The_desent()
+Skeletor_jokes()
 Minnion_wave_1()
 Minnion_wave_2()
 Enemy_sentinal()
+John_bbeg()
 #put this here to save stuff 
