@@ -137,29 +137,42 @@ def Bot_champs():
 #this it to save changes
 def Minnion_wave_1():
     global Player_char
-    wave_option_1 = input("You have spawed in the battle area and enter right by what you assume to be your Gaurdian/Sentinal being and it tells you\n 'You have three options to continue'\n"
+    Minnion_wave_options_1 = input("You have spawed in the battle area and enter right by what you assume to be your Gaurdian/Sentinal being and it tells you\n 'You have three options to continue'\n"
           +"Option 1\nYou can leave but that will not end well\n\n Option 2 you can clear that aproching wave of ghouls\n\n" 
-          + "Option 3 you will let your own wave of Skeletions to clear it for you\n\n 'So which will it be'\n(pleas answer options as 1, 2, or 3.)" ).lower()
-    if wave_option_1 == "1":
+          + "Option 3 you will let your own wave of Skeletons to clear it for you\n\n 'So which will it be'\n(pleas answer options as 1, 2, or 3.)" ).lower()
+    if Minnion_wave_options_1 == "1":
         print("Mr.Burns from the Simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
-    elif wave_option_1 == "2":
-        print("The Sentinal watches as you clear the minnion wave with ease quite frankly he is shoked by it the sentinal gives you a potion that gives you a +2")
+    elif Minnion_wave_options_1 == "2":
+        print("The Sentinal watches as you clear the minnion wave with ease quite frankly he is shoked by it the sentinal gives you a potion that gives you a +1 on top of the experience that you gained")
         Player_char =+2
-    
-    elif wave_option_1 == "3":
-        print("The ghouls and skelitons start brwaling in the middle and you 'Bark' comands at the sekitons they semingly understand push through the wave leaving a few surounding you.\n"+
-              "You have gained knolage from this counter you get a +1")
+
+    elif Minnion_wave_options_1 == "3":
+        print("The ghouls and skeletons start brwaling in the middle and you 'Bark' comands at the Skeletons they semingly understand push through the wave leaving a few surounding you.\n"+
+              "You have gained knolage from this encounter you get a +1")
         Player_char=+1
     else:
-        print("Mr.Burns from the Simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
+         print("Mr.Burns from the Simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
 def Minnion_wave_2():
-    input("In the distance you see the next wave of ghouls approaching 
-          IF ")
-def First_enemy_sentinal():
-    input("ads")
-    
+    global Player_char
+    Minnion_wave_options_2 =input("In the distance you see the next wave of ghouls approaching. You turn around and see the next wave of skeletons aproaching. You assume your choices are the same as before so you chose option 1, 2, or 3?\n").lower()
+    if Minnion_wave_options_2 == "1":
+        print("Mr.Burns from the Simpsons was watching from affar and got upset with you he has released the hounds.\n (you suck at this)")
+    elif Minnion_wave_options_2 == "2" or Minnion_wave_options_2 == "3":
+        print("You approach the enemy wave and with your extra numbers you reach the choke point in front of the enemy sentinal quite esally ")
+        Player_char =+1
+    else:
+        print("I dont like you any more now leave")
+def Enemy_sentinal():
+    global Player_char
+    Enemy_sentinal_interaction = input("As you turn the corner you see the opposing Sentinal.\n your Skeletons start attacking it and you can see the they wont be able to take the sentinal down without your help So do you?(Y or N)").lower()
+    if Enemy_sentinal_interaction == "y" and Player_char >= 4:
+        print("You slay the oposing Sentinal with the help of your Skeletons and you feal as if you could slay a god and with that you see the rest of the sentinals down this road or lane if you could call it that " +
+              "Crash down and turn to what looks like ruble. You see the next wave of ghouls stop and turn into lights accross the wall and your skeletons do the same along your side")
+        Player_char +=55
+    elif Enemy_sentinal_interaction == "y" and Player_char <= 3:
 
 #put this here to save stuff 
 start()
 item_select()
 Minnion_wave_1()
+Minnion_wave_2()
