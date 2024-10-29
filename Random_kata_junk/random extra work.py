@@ -173,11 +173,34 @@ def Enemy_sentinal():
     else:
         print("Are you reallly denser than Osmium you {insert random gordon ramsey quote}.\n You don't dessirve to try agin over this are you kiding me.")
 
+def The_desent():
+    yes_or_no =input("As yo dessend into this structure you hear 'Elevator music' do you leave it on or turn it off ( Type Off or On)\n ").lower()
+    if yes_or_no == "Off":
+        y_or_n = input("Are you sure(Y or N)").lower()
+        if y_or_n == "y":
+            print("You win this is only one of the 2 good endings")
+        else:
+            print("Thank you for listesning to the music ")
+    else:
+        print("Thank you for listesning to the music ")
 
-
-
-
+def The_walk():
+    print("As you march through the lands to get to the arena you hear music.")
+    sirens = input("Do you 1. Go twards the music or 2. keep walking forewards(type 1 or 2)\n ")
+    if sirens == "1":
+        print("You aboslute bofon you never go twards music it is always a trap or scam. Do i need to get you a coipy of Adventuring for dumies.")
+    elif sirens == "2":
+        print("Wow you made the smart and educated deccision.\n You aproach a tomb or enterance of a biulding ")
+def The_telaporter():
+    telaporter = input("As you enter this biulding you see a 'Telaporter' you can either 1. Go down or 2. Stay upstairs")
+    if telaporter =="1." or telaporter =="1":
+        print("You push the button to go down the elevator it's just an elavator.")
+    else:
+        print("I mean you decided to not go down the elavator this is your own fault and out of my hands.\n You see a screen turn on and some creepy doll say let's play a game.")
 start()
 item_select()
+The_walk()
+The_desent()
 Minnion_wave_1()
 Minnion_wave_2()
+Enemy_sentinal()
