@@ -9,8 +9,12 @@ def dice_roll():
     if cp.button_a:
                 for i in range(roll):
                         cp.pixels[i] = (0,0,25)
+                while cp.button_a:
+                        pass
     if cp.button_b:
                 for ia in range(0,10):
                         cp.pixels[ia] = (0,0,0)
+                while cp.button_b:
+                        pass
 while True:
     dice_roll()
