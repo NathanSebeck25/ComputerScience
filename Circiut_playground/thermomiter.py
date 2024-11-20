@@ -29,3 +29,5 @@ while True:
     if temp_f > 86:
         cp.pixels[9] =((1, 0, 0)) 
     time.sleep(0.5)
+    #each if stand for a different temp and runs a corisponding light
+    # rangeing from cold to hot 

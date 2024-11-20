@@ -11,3 +11,4 @@ while True:
           cp.pixels[space]= (47, 2, 79)
           time.sleep(.1)
           cp.pixels[space]= (0, 0, 0)
+          

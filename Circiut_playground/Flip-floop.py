@@ -12,7 +12,7 @@ while True:
       for i in range(0,5):
             
             cp.pixels[i]= (47, 2, 79)
-            
+            #turns right side on left side off
    else:
       for y in range(0,5):
             
@@ -21,3 +21,4 @@ while True:
       for b in range(5,10):
             
             cp.pixels[b]= (47, 2, 79)
+            #turns right side off turns right side on 

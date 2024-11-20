@@ -12,6 +12,7 @@ while True:
             cp.pixels[6] = (0, 0, 0)
             cp.pixels[7] = (0, 0, 0)
             cp.pixels[8] = (0, 0, 0)
+            #turns middle three pixels on left side on if tiped more that 1 unit to that side
 
     elif x < -1:
             cp.pixels[1] = (0, 0, 0)
@@ -20,3 +21,4 @@ while True:
             cp.pixels[6] =( 0, 25, 0)
             cp.pixels[7] = (0, 25, 0)
             cp.pixels[8] = (0, 25, 0)
+        #turns middle three pixels on right side on if tiped more that 1 unit to that side

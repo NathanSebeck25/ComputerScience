@@ -3,7 +3,9 @@ from adafruit_circuitplayground import cp
 import time
 
 import random
+#imoprts of code utility
 
+#the color meter function 
 def color_meter():
     while cp.light < 30:
             cp.pixels[0] = (0,0,5)
@@ -29,9 +31,6 @@ def color_meter():
             
     
 while True:
-    if cp.button_a:
         color_meter()
    
     
-    if cp.button_b:
-        cp.pixels.fill((0,0,0))

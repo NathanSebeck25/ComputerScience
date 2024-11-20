@@ -6,6 +6,7 @@ import time
 while True:
     
         cp.pixels.fill((0,0,0))
-        time.sleep(.367)
+        time.sleep(.367)# turn off
         cp.pixels.fill((0,1,0))
         time.sleep(.367)
+        # turn on

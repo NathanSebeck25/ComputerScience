@@ -15,7 +15,7 @@ while True:
         while cp.button_b:
             pass
         cp.pixels[0+count] = (0,0,0)
-
+#above counts the code and below are the limiting factors 
     if count >9:
         count = 9
 

@@ -11,10 +11,12 @@ def dice_roll():
                         cp.pixels[i] = (0,0,25)
                 while cp.button_a:
                         pass
+                #rooling of the dice
     if cp.button_b:
                 for ia in range(0,10):
                         cp.pixels[ia] = (0,0,0)
                 while cp.button_b:
                         pass
+                #clears all the light's
 while True:
     dice_roll()

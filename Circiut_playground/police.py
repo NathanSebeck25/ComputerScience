@@ -8,8 +8,8 @@ while True:
     for i in range (0,10):
         cp.pixels.fill(1,0,0)
         cp.play_tone(500,.5)
-        time.sleep(.5)
+        time.sleep(.5)# turns red on 
         cp.pixels.fill(0,0,1)
         cp.play_tone(900,.5)
         time.sleep(.5)
-        
+        #turns blue on 
