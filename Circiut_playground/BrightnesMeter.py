@@ -24,7 +24,7 @@ def color_meter():
     while cp.light < 6:
             cp.pixels[8] = (0,0,5)  
     while cp.light < 3:
-            cp.pixels[9] = (0,0,5)  
+            cp.pixels.fill((0,0,5))
 
             
     
